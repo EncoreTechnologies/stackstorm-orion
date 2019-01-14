@@ -41,5 +41,5 @@ class QueryTestCase(OrionBaseActionTestCase):
         result = action.run(query, parameters)
         self.assertEquals(result, expected)
 
-        mock_connect.assert_called_once()
+        mock_connect.assert_called_with()
         mock_query.assert_called_with(query, **parameters)
